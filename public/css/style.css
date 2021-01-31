@@ -1,3 +1,58 @@
+body {
+  padding: 0;
+  margin: 0;
+}
 
+.container {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 1200px;
+  width: 100%;
+}
+
+*, *:focus, *:hover {
+  outline: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (min-width: 320px) {
+  header .container {
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    flex-flow: row nowrap;
+  }
+  header .container .logo {
+    width: 150px;
+  }
+  header .container i.fas.fa-arrow-left {
+    position: absolute;
+    font-size: 1.2em;
+    padding-bottom: 7px;
+    left: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .container i.fas.fa-arrow-left {
+    left: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    display: flex;
+    justify-content: center;
+  }
+  header .container i.fas.fa-arrow-left {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,36 @@
+@include for-phone-up{
+    header .container{
+        justify-content: center;
+        align-items: center;
+        height: 75px;
+        flex-flow: row nowrap;
+
+        .logo{
+            width: 150px;
+        }
+
+        i.fas.fa-arrow-left{
+            position: absolute;
+            font-size: 1.2em;
+            padding-bottom: 7px;
+            left: 30px;
+        }
+    }
+}
+
+@include for-tablet-up{
+    header .container i.fas.fa-arrow-left{
+        left: 100px;
+    }
+}
+
+@include for-desktop-up{
+    header{
+        display: flex;
+        justify-content: center;
+
+        .container i.fas.fa-arrow-left{
+            display: none;
+        }
+   }
+}

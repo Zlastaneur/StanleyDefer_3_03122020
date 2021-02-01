@@ -1,9 +1,9 @@
 @mixin for-phone-up {
-    @media screen and (min-width: 320px) { @content; }
+  @media screen and (min-width: 320px) { @content; }
   }
 
 @mixin for-tablet-up {
-    @media screen and (min-width: 768px) { @content; }
+  @media screen and (min-width: 768px) { @content; }
 }
 
 @mixin for-desktop-up {

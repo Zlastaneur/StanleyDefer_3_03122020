@@ -41,9 +41,9 @@ body {
     align-items: center;
     max-height: 50px;
     color: #3b3b3b;
-    -webkit-box-shadow: inset 0 2px 4px 0 rgba(138, 138, 138, 0.507);
-    -moz-box-shadow: inset 0 2px 4px 0 rgba(138, 138, 138, 0.507);
-    box-shadow: inset 0 2px 4px 0 rgba(138, 138, 138, 0.507);
+    -webkit-box-shadow: inset 0 3px 3px 0 rgba(131, 131, 131, 0.322);
+    -moz-box-shadow: inset 0 3px 3px 0 rgba(131, 131, 131, 0.322);
+    box-shadow: inset 0 3px 3px 0 rgba(131, 131, 131, 0.322);
   }
   .location i.fas.fa-map-marker-alt {
     margin-right: 15px;
@@ -77,6 +77,65 @@ body {
   box-shadow: 0 4px 8px 0 #8b8b8b;
 }
 
+.tutorialBtn {
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 28px;
+  border: 0px;
+  cursor: pointer;
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 0.9em;
+  padding: 20px 20px 20px 0px;
+  box-shadow: 0 4px 8px 0 #d4d4d4;
+  max-height: 65px;
+  height: 100%;
+  max-width: 400px;
+  width: 100%;
+  background-color: whitesmoke;
+}
+.tutorialBtn .circle {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  padding: 8px 8px 7px 7px;
+  background: #9356DC;
+  text-align: center;
+  font-size: 1em;
+  left: -10px;
+  color: white;
+}
+.tutorialBtn .buttonText {
+  padding-top: 5px;
+  font-weight: 600;
+}
+.tutorialBtn .buttonText i {
+  position: relative;
+  font-size: 1.1em;
+  margin: 0px 25px 0px 5px;
+  color: grey;
+}
+.tutorialBtn .buttonText i.fas.fa-mobile-alt {
+  margin-left: 10px;
+  margin-right: 29px;
+}
+.tutorialBtn .buttonText i.fas.fa-list-ul {
+  margin-left: 8px;
+}
+.tutorialBtn:hover {
+  transform: scale(1.1);
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+  background: #9256dc2a;
+  box-shadow: 0 4px 8px 0 #8b8b8b;
+}
+.tutorialBtn:hover i {
+  color: #9356DC;
+}
+
 @media screen and (min-width: 320px) {
   header .container {
     display: flex;
@@ -84,6 +143,7 @@ body {
     align-items: center;
     flex-flow: row wrap;
     text-align: center;
+    box-sizing: border-box;
     height: 60px;
   }
   header .container .logo {
@@ -114,8 +174,9 @@ body {
     align-items: center;
     flex-flow: row wrap;
     text-align: center;
+    box-sizing: border-box;
     padding: 0px 20px 50px 20px;
-    background-color: #f8f8f8;
+    background-color: whitesmoke;
   }
   .explore h2 {
     margin-bottom: 0px;
@@ -125,6 +186,47 @@ body {
     margin: 15px 0 30px 0;
     width: 100%;
     color: #5f5f5f;
+  }
+}
+@media screen and (min-width: 320px) {
+  .tutorial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    box-sizing: border-box;
+    justify-content: start;
+    padding: 10px 20px 50px 20px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+  }
+
+  .tutorialBtn {
+    margin: 0 0 15px 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .tutorial {
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  .tutorial h2 {
+    width: 100%;
+  }
+  .tutorial .tutorialBtn {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tutorial {
+    flex-flow: row wrap;
+  }
+  .tutorial .tutorialBtn {
+    margin: 0 20px 10px 20px;
   }
 }
 

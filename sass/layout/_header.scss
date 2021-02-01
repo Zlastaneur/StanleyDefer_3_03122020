@@ -1,11 +1,10 @@
 @include for-phone-up{
     header .container{
-        justify-content: center;
-        align-items: center;
-        height: 75px;
-        flex-flow: row nowrap;
+        @include flex;
+        height: 60px;
 
         .logo{
+            padding-top: 5px;
             width: 150px;
         }
 
@@ -25,12 +24,7 @@
 }
 
 @include for-desktop-up{
-    header{
-        display: flex;
-        justify-content: center;
-
-        .container i.fas.fa-arrow-left{
-            display: none;
-        }
-   }
+    header .container i.fas.fa-arrow-left{
+        display: none;
+    }
 }

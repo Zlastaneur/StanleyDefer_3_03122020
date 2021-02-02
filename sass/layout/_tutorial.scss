@@ -1,5 +1,5 @@
 @include for-phone-up{
-    .tutorial{
+    #tutorial{
         @include flex;
         justify-content: start;
         padding: 10px 20px 50px 20px;
@@ -16,7 +16,7 @@
 }
 
 @include for-tablet-up{
-    .tutorial{
+    #tutorial{
         flex-flow: column nowrap;
         justify-content: center;
 
@@ -31,7 +31,7 @@
 }
 
 @include for-desktop-up{
-    .tutorial{
+    #tutorial{
         flex-flow: row wrap;
 
         .tutorialBtn{

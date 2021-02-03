@@ -6,9 +6,7 @@
         justify-content: center;
         align-items: center;
         max-height: 50px;
-        color: rgb(59, 59, 59);
-        -webkit-box-shadow: inset 0 3px 3px 0 rgba(131, 131, 131, 0.322);
-        -moz-box-shadow: inset 0 3px 3px 0 rgba(131, 131, 131, 0.322);
+        color: $alternative-color_darker;
         box-shadow: inset 0 3px 3px 0 rgba(131, 131, 131, 0.322);
 
         i.fas.fa-map-marker-alt{

@@ -5,7 +5,6 @@ body {
 
 .container {
   display: flex;
-  box-sizing: border-box;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -13,6 +12,10 @@ body {
 
 *, *:focus, *:hover {
   outline: none;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 li {
@@ -54,7 +57,7 @@ body {
     width: 100%;
   }
 }
-.exploreBtn {
+.smallBtn {
   background: linear-gradient(160deg, #ff79d9 5%, #9356DC 100%);
   border-radius: 28px;
   border: 0px;
@@ -67,12 +70,11 @@ body {
   padding: 15px 20px;
   box-shadow: 0 4px 8px 0 #afafaf;
 }
-.exploreBtn:hover {
+.smallBtn:hover {
   transform: scale(1.1);
   transition-duration: 0.1s;
   transition-timing-function: ease-in;
   background: linear-gradient(160deg, #ff79d9ef 5%, #9256dcef 100%);
-  box-shadow: 0 4px 8px 0 #8b8b8b;
 }
 
 .tutorialBtn {
@@ -95,6 +97,7 @@ body {
 .tutorialBtn .circle {
   display: flex;
   position: relative;
+  box-sizing: content-box;
   align-items: center;
   border-radius: 50%;
   width: 7px;
@@ -128,7 +131,6 @@ body {
   transition-duration: 0.1s;
   transition-timing-function: ease-in;
   background: #9256dc2a;
-  box-shadow: 0 4px 8px 0 #8b8b8b;
 }
 .tutorialBtn:hover i {
   color: #9356DC;
@@ -140,7 +142,7 @@ body {
     max-width: 300px;
     width: 100%;
     height: 180px;
-    box-shadow: 0 4px 8px 0 #e9e9e9;
+    box-shadow: 0 4px 8px 0 #d4d4d4;
     border-radius: 15px;
     background-color: white;
     margin: 5px 10px 30px 5px;
@@ -208,7 +210,6 @@ body {
   background-image: linear-gradient(to bottom, white, white, #9356DC, #FF79DA);
   color: transparent;
   transition: background-position 1s;
-  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-stroke-width: 1.2px;
   -webkit-text-stroke-color: black;
@@ -222,6 +223,7 @@ body {
 
 @media screen and (min-width: 320px) {
   .banner {
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,8 +242,84 @@ body {
     max-height: 400px;
   }
 }
+.meal {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 #d4d4d4;
+}
+.meal:hover .check {
+  transition: width 2s ease-out;
+  width: 100%;
+}
+.meal:hover .fa-check-circle {
+  transition: transform 380ms ease;
+  transform: rotate(360deg);
+}
+.meal .description {
+  padding: 10px 0px 10px 10px;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.meal .description h3 {
+  margin: 0;
+  font-size: 1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 80%;
+}
+.meal .description p {
+  width: 80%;
+  font-size: 0.8em;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.meal .description span {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 20%;
+  font-size: 0.8em;
+  font-weight: 800;
+}
+.meal .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 0px;
+  max-width: 60px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #99E2D0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  top: 0;
+  font-size: 0.65em;
+  transition: width 0.55s ease;
+}
+.meal .check .fa-check-circle {
+  color: #fff;
+}
+
 @media screen and (min-width: 320px) {
   header .container {
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -274,6 +352,7 @@ body {
 }
 @media screen and (min-width: 320px) {
   .explore {
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,6 +374,7 @@ body {
 }
 @media screen and (min-width: 320px) {
   #tutorial {
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -336,6 +416,7 @@ body {
 }
 @media screen and (min-width: 320px) {
   #restaurant {
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -361,6 +442,7 @@ body {
 }
 @media screen and (min-width: 320px) {
   footer {
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -404,44 +486,47 @@ body {
 }
 @media screen and (min-width: 320px) {
   #menu {
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
     text-align: center;
     box-sizing: border-box;
-    justify-content: flex-start;
     position: relative;
     top: -30px;
-    background-color: white;
-    border: 5px solid white;
+    background-color: whitesmoke;
+    border-top: 5px solid whitesmoke;
     border-radius: 30px 30px 0 0;
-    padding: 20px 10px 50px 10px;
+    padding: 20px 20px 50px 20px;
+    margin-bottom: -30px;
   }
-  #menu .title {
+  #menu .restaurantName {
     display: flex;
     width: 100%;
-    flex-flow: nowrap;
     align-items: center;
-    max-height: 50px;
+    margin-bottom: 25px;
   }
-  #menu .title h1 {
+  #menu .restaurantName h1 {
     font-weight: 400;
-    margin: 0 30px 20px 0;
+    margin: 0 30px 0 0;
   }
-  #menu .title i {
+  #menu .title {
+    text-align: left;
     margin-bottom: 20px;
   }
-  #menu h2 {
+  #menu .title h2 {
     display: inline-block;
-    width: 100%;
+    max-width: 100%;
     position: relative;
+    text-align: left;
     text-transform: uppercase;
     font-size: 1em;
     font-weight: 400;
     margin: 0;
+    padding-bottom: 5px;
   }
-  #menu h2:before {
+  #menu .title h2:before {
     position: absolute;
     height: 2px;
     width: 50%;
@@ -451,15 +536,35 @@ body {
     content: "";
     background: #99E2D0;
   }
+  #menu .starter, #menu .mainCourse, #menu .dessert {
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    margin-bottom: 25px;
+  }
+  #menu .starter .meal, #menu .mainCourse .meal, #menu .dessert .meal {
+    margin-bottom: 15px;
+  }
 }
 @media screen and (min-width: 768px) {
-  #menu .title {
+  #menu .restaurantName {
     justify-content: center;
+  }
+  #menu .starter, #menu .mainCourse, #menu .dessert {
+    align-items: center;
   }
 }
 @media screen and (min-width: 1200px) {
   #menu {
+    flex-flow: row wrap;
     border-radius: 0px;
+  }
+  #menu .restaurantName {
+    width: 100%;
+  }
+  #menu .starter, #menu .mainCourse, #menu .dessert {
+    align-items: left;
+    max-width: 33%;
   }
 }
 

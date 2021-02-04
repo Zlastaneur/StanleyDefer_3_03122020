@@ -11,10 +11,15 @@
 }
 
 @mixin flex{
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
   text-align: center;
   box-sizing: border-box;
+}
+
+@mixin shadow{
+  box-shadow: 0 4px 8px 0 #d4d4d4;
 }

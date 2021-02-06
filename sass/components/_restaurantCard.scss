@@ -13,11 +13,12 @@
             transition-duration: 0.1s;
             transition-timing-function: ease-in-out;
 
-        &:hover{
-            transform: scale(1.1);
-            transition-duration: 0.1s;
-            transition-timing-function: ease-in-out;
-        }}
+            &:hover{
+                transform: scale(1.1);
+                transition-duration: 0.1s;
+                transition-timing-function: ease-in-out;
+            }
+        }
 
         a{
             display: block;

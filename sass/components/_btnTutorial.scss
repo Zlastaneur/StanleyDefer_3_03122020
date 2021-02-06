@@ -3,7 +3,6 @@
     justify-content: flex-start;
     border-radius: 28px;
     border: 0px;
-    cursor: pointer;
     font-family: Arial;
     font-weight: 400;
     font-size: 0.9em;
@@ -53,9 +52,6 @@
     }
 
     &:hover{
-        transform: scale(1.1);
-        transition-duration: 0.1s;
-        transition-timing-function: ease-in;
         background: #9256dc2a ;
     }
 

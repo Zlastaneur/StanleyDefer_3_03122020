@@ -10,7 +10,14 @@
             border-radius: 15px;
             background-color: white;
             margin: 5px 10px 30px 5px;
-        }
+            transition-duration: 0.1s;
+            transition-timing-function: ease-in-out;
+
+        &:hover{
+            transform: scale(1.1);
+            transition-duration: 0.1s;
+            transition-timing-function: ease-in-out;
+        }}
 
         a{
             display: block;
@@ -58,16 +65,16 @@
                 font-size: 0.7em;
                 font-weight: 700;
                 text-align: center;
-                max-width: 65px;
+                width: 65px;
                 border-radius: 3px;
                 padding: 5px 2px;
                 background-color: $third-color;
                 color: $third-color_darker;
-                right: 0;
+                right: 0px;
                 position: absolute;
                 margin: 10px 10px 0 0;
                 z-index: 1;
-                width: 100%;
+                
             }
         }
     }

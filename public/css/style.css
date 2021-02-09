@@ -166,9 +166,7 @@ body {
   display: inline-block;
   cursor: pointer;
   color: white;
-  font-family: Arial;
-  font-weight: 400;
-  font-size: 0.9em;
+  font-weight: 500;
   padding: 15px 20px;
   box-shadow: 0 4px 8px 0 #afafaf;
   transition-duration: 0.1s;
@@ -507,13 +505,13 @@ body {
     justify-content: start;
     padding: 10px 20px 50px 20px;
   }
-
-  h2 {
+  #tutorial h2 {
+    text-align: left;
     font-size: 1.3em;
     margin-bottom: 25px;
+    width: 100%;
   }
-
-  .tutorialBtn {
+  #tutorial .tutorialBtn {
     margin: 0 0 15px 10px;
   }
 }
@@ -523,7 +521,7 @@ body {
     justify-content: center;
   }
   #tutorial h2 {
-    width: 100%;
+    text-align: center;
   }
   #tutorial .tutorialBtn {
     margin-bottom: 20px;
@@ -597,6 +595,9 @@ body {
   }
   footer a {
     color: white;
+  }
+  footer a:hover {
+    color: #99E2D0;
   }
 }
 @media screen and (min-width: 768px) {

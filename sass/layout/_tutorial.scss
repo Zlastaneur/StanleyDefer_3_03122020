@@ -3,15 +3,17 @@
         @include flex;
         justify-content: start;
         padding: 10px 20px 50px 20px;
-    }
 
-    h2{
-        font-size: 1.3em;
-        margin-bottom: 25px;
-    }
+        h2{
+            text-align: left;
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            width: 100%;
+        }
 
-    .tutorialBtn{
-        margin: 0 0 15px 10px; 
+        .tutorialBtn{
+            margin: 0 0 15px 10px; 
+        }
     }
 }
 
@@ -21,7 +23,7 @@
         justify-content: center;
 
         h2{
-            width: 100%;
+            text-align: center;
         }
 
         .tutorialBtn{

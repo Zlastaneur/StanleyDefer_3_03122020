@@ -1,0 +1,26 @@
+@include for-phone-up{
+    #restaurant{
+        @include flex;
+        background-color: $alternative-color;
+        text-align: left;
+        padding: 30px 20px 50px 20px;
+    
+        .title{
+            width: 100%;
+            text-align: left;
+        }
+    }
+}
+
+@include for-tablet-up{
+    #restaurant{
+    
+        h2{
+            text-align: center;
+        }
+
+        .card{
+            margin: 20px 20px 20px 20px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "stanleydefer_3_03122020",
+  "version": "1.0.0",
+  "description": "Projet3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zlastaneur/StanleyDefer_3_03122020.git"
+  },
+  "author": "Stanley Defer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zlastaneur/StanleyDefer_3_03122020/issues"
+  },
+  "homepage": "https://github.com/Zlastaneur/StanleyDefer_3_03122020#readme"
+}

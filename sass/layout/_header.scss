@@ -1,0 +1,31 @@
+@include for-phone-up{
+    header .container{
+        @include flex;
+        height: 60px;
+
+        .logo{
+            padding-top: 5px;
+            width: 150px;
+        }
+
+        i.fas.fa-arrow-left{
+            color: $alternative-color_darker;
+            position: absolute;
+            font-size: 1.1em;
+            top: 21px;
+            left: 30px;
+        }
+    }
+}
+
+@include for-tablet-up{
+    header .container i.fas.fa-arrow-left{
+        left: 100px;
+    }
+}
+
+@include for-desktop-up{
+    header .container i.fas.fa-arrow-left{
+        display: none;
+    }
+}

@@ -1,0 +1,48 @@
+@include for-phone-up{
+    footer{
+        @include flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        text-align: left;
+        padding: 20px 20px 20px 20px;
+        background-color: $alternative-color_darker;
+        color: white;  
+        
+        h5{
+            margin: 0;
+            font-size: 1.1em;
+            font-weight: 400;
+        }
+
+        ul{
+            margin: 20px 0 0 0;
+            padding-left: 0;
+        }
+
+        li{
+            font-size: 0.85em;
+            margin-bottom: 10px;
+        }
+
+        i{  
+            width: 15px;
+            margin-right: 10px;
+            font-size: 0.8em;
+        }
+
+        a{
+            color: white;
+
+            &:hover{
+                color: $third-color;
+            }
+        }
+    }
+}
+
+@include for-tablet-up{
+    footer{
+        align-items: center;
+        text-align: center;
+    }
+}

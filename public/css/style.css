@@ -1,0 +1,736 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+*, *:focus, *:hover {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h5 {
+  font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 320px) {
+  .loader-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    opacity: 1;
+    animation: disappear 0s linear 3s, fadeOut 1s linear 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 5;
+  }
+  .loader-wrapper .logo {
+    margin-bottom: 30px;
+    width: 200px;
+  }
+  .loader-wrapper .loader {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: linear-gradient(#9356DC, #FF79DA, #9356DC);
+    animation: animate 1.2s linear 0s;
+    animation-iteration-count: 4;
+    animation-fill-mode: forwards;
+  }
+  .loader-wrapper .loader:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #f1f1f1;
+    border: solid #99E2D0 3px;
+    border-radius: 50%;
+  }
+  .loader-wrapper .loader span:nth-child(1) {
+    filter: blur(5px);
+  }
+  .loader-wrapper .loader span:nth-child(2) {
+    filter: blur(10px);
+  }
+  .loader-wrapper .loader span:nth-child(3) {
+    filter: blur(25px);
+  }
+  .loader-wrapper .loader span:nth-child(4) {
+    filter: blur(50px);
+  }
+  .loader-wrapper .loader span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(#FF79DA, #9356DC, #FF79DA);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .loader-wrapper {
+    flex-flow: row wrap;
+  }
+  .loader-wrapper .logo {
+    margin-bottom: 0px;
+    margin-right: 30px;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes disappear {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+@media screen and (min-width: 320px) {
+  .location {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #ebebeb;
+    justify-content: center;
+    align-items: center;
+    max-height: 50px;
+    color: #3b3b3b;
+    box-shadow: inset 0 3px 3px 0 rgba(131, 131, 131, 0.322);
+  }
+  .location i.fas.fa-map-marker-alt {
+    margin-right: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .location {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.smallBtn {
+  background: linear-gradient(160deg, #ff79d9 5%, #9356DC 100%);
+  border-radius: 28px;
+  border: 0px;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px 0 #afafaf;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+}
+.smallBtn:hover {
+  transform: scale(1.1);
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+  box-shadow: 0 4px 8px 0 #949494;
+  background: linear-gradient(160deg, #ff79d9ef 5%, #9256dcef 100%);
+}
+
+.tutorialBtn {
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 28px;
+  border: 0px;
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 0.9em;
+  padding: 20px 20px 20px 0px;
+  box-shadow: 0 4px 8px 0 #d4d4d4;
+  max-height: 65px;
+  height: 100%;
+  max-width: 400px;
+  width: 100%;
+  background-color: whitesmoke;
+}
+.tutorialBtn .circle {
+  display: flex;
+  position: relative;
+  box-sizing: content-box;
+  align-items: center;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  padding: 8px 8px 7px 7px;
+  background: #9356DC;
+  text-align: center;
+  font-size: 1em;
+  left: -10px;
+  color: white;
+}
+.tutorialBtn .buttonText {
+  padding-top: 5px;
+  font-weight: 600;
+}
+.tutorialBtn .buttonText i {
+  position: relative;
+  font-size: 1.1em;
+  margin: 0px 25px 0px 5px;
+  color: grey;
+}
+.tutorialBtn .buttonText i.fas.fa-mobile-alt {
+  margin-left: 10px;
+  margin-right: 29px;
+}
+.tutorialBtn .buttonText i.fas.fa-list-ul {
+  margin-left: 8px;
+}
+.tutorialBtn:hover {
+  background: #9256dc2a;
+}
+.tutorialBtn:hover i {
+  color: #9356DC;
+}
+
+@media screen and (min-width: 320px) {
+  #restaurant .card {
+    display: flex;
+    max-width: 300px;
+    width: 100%;
+    height: 180px;
+    box-shadow: 0 4px 8px 0 #d4d4d4;
+    border-radius: 15px;
+    background-color: white;
+    margin: 5px 10px 30px 5px;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+  }
+  #restaurant .card:hover {
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+  }
+  #restaurant a {
+    display: block;
+    height: 180px;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+  }
+  #restaurant img {
+    z-index: 0;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+  #restaurant .cardText {
+    max-height: 50px;
+    padding-left: 15px;
+  }
+  #restaurant .cardText p {
+    max-width: 70%;
+    font-size: 0.9em;
+    margin: 5px 0px 5px 0px;
+  }
+  #restaurant h3 {
+    max-width: 70%;
+    font-size: 1em;
+    margin: 5px 0px 5px 0px;
+  }
+  #restaurant i {
+    position: relative;
+    left: 210px;
+    bottom: 35px;
+  }
+  #restaurant .new {
+    position: relative;
+  }
+  #restaurant .new p {
+    font-size: 0.7em;
+    font-weight: 700;
+    text-align: center;
+    width: 65px;
+    border-radius: 3px;
+    padding: 5px 2px;
+    background-color: #99E2D0;
+    color: #009c73;
+    right: 0px;
+    position: absolute;
+    margin: 10px 10px 0 0;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  #restaurant i {
+    left: 230px;
+  }
+}
+.fill {
+  font-size: 1.3em;
+  font-weight: 400;
+  cursor: pointer;
+}
+.fill:hover {
+  color: #9356DC;
+  font-weight: 800;
+  animation: heartbeat 1.4s linear infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1.1);
+  }
+  2% {
+    transform: scale(1.1);
+  }
+  4% {
+    transform: scale(1.3);
+  }
+  8% {
+    transform: scale(1.2);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  24% {
+    transform: scale(1.2);
+  }
+  32% {
+    transform: scale(1.3);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+}
+@media screen and (min-width: 320px) {
+  .banner {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+  }
+  .banner img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .banner img {
+    max-height: 400px;
+  }
+}
+.meal {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 #d4d4d4;
+}
+.meal:hover .check {
+  transition: width 2s ease-out;
+  width: 100%;
+}
+.meal:hover .fa-check-circle {
+  transition: transform 380ms ease;
+  transform: rotate(360deg);
+}
+.meal .description {
+  padding: 10px 0px 10px 10px;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.meal .description h3 {
+  margin: 0;
+  font-size: 1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 80%;
+}
+.meal .description p {
+  width: 80%;
+  font-size: 0.8em;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.meal .description span {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 20%;
+  font-size: 0.8em;
+  font-weight: 800;
+}
+.meal .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 0px;
+  max-width: 60px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #99E2D0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  top: 0;
+  font-size: 0.65em;
+  transition: width 0.95s ease -0.25s;
+}
+.meal .check .fa-check-circle {
+  color: #fff;
+}
+
+@media screen and (min-width: 320px) {
+  header .container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    height: 60px;
+  }
+  header .container .logo {
+    padding-top: 5px;
+    width: 150px;
+  }
+  header .container i.fas.fa-arrow-left {
+    color: #3b3b3b;
+    position: absolute;
+    font-size: 1.1em;
+    top: 21px;
+    left: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .container i.fas.fa-arrow-left {
+    left: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .container i.fas.fa-arrow-left {
+    display: none;
+  }
+}
+@media screen and (min-width: 320px) {
+  .explore {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    padding: 0px 20px 50px 20px;
+    background-color: whitesmoke;
+  }
+  .explore h2 {
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  .explore p {
+    margin: 15px 0 30px 0;
+    width: 100%;
+    color: #5f5f5f;
+  }
+}
+@media screen and (min-width: 320px) {
+  #tutorial {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: start;
+    padding: 10px 20px 50px 20px;
+  }
+  #tutorial h2 {
+    text-align: left;
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  #tutorial .tutorialBtn {
+    margin: 0 0 15px 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #tutorial {
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+  #tutorial h2 {
+    text-align: center;
+  }
+  #tutorial .tutorialBtn {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #tutorial {
+    flex-flow: row wrap;
+  }
+  #tutorial .tutorialBtn {
+    margin: 0 20px 10px 20px;
+  }
+}
+@media screen and (min-width: 320px) {
+  #restaurant {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    background-color: whitesmoke;
+    text-align: left;
+    padding: 30px 20px 50px 20px;
+  }
+  #restaurant .title {
+    width: 100%;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  #restaurant h2 {
+    text-align: center;
+  }
+  #restaurant .card {
+    margin: 20px 20px 20px 20px;
+  }
+}
+@media screen and (min-width: 320px) {
+  footer {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    text-align: left;
+    padding: 20px 20px 20px 20px;
+    background-color: #3b3b3b;
+    color: white;
+  }
+  footer h5 {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 400;
+  }
+  footer ul {
+    margin: 20px 0 0 0;
+    padding-left: 0;
+  }
+  footer li {
+    font-size: 0.85em;
+    margin-bottom: 10px;
+  }
+  footer i {
+    width: 15px;
+    margin-right: 10px;
+    font-size: 0.8em;
+  }
+  footer a {
+    color: white;
+  }
+  footer a:hover {
+    color: #99E2D0;
+  }
+}
+@media screen and (min-width: 768px) {
+  footer {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 320px) {
+  #menu {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    position: relative;
+    top: -30px;
+    background-color: whitesmoke;
+    border-top: 5px solid transparent;
+    border-radius: 30px 30px 0 0;
+    padding: 20px 20px 50px 20px;
+    margin-bottom: -30px;
+  }
+  #menu .restaurantName {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  #menu .restaurantName h1 {
+    font-weight: 400;
+    margin: 0 30px 0 0;
+  }
+  #menu .title {
+    text-align: left;
+    margin: 10px 0 5px 0;
+  }
+  #menu .title h2 {
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+  #menu .title h2:before {
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background: #99E2D0;
+  }
+  #menu .starter, #menu .mainCourse, #menu .dessert {
+    display: flex;
+    width: 100%;
+    max-height: 280px;
+    flex-flow: column nowrap;
+    margin-bottom: 25px;
+  }
+  #menu .smallBtn {
+    margin-top: 10px;
+  }
+  #menu .one {
+    margin-top: 15px;
+    opacity: 0;
+    animation: marginIn 1s ease-in-out 0s, fadeIn 1s ease 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  #menu .two {
+    margin-top: 15px;
+    opacity: 0;
+    animation: marginIn 1s ease-in-out 0.2s, fadeIn 1s ease 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  #menu .three {
+    margin-top: 15px;
+    opacity: 0;
+    animation: marginIn 1s ease-in-out 0.4s, fadeIn 1s ease 0.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  #menu .four {
+    margin-top: 15px;
+    opacity: 0;
+    animation: marginIn 1s ease-in-out 0.6s, fadeIn 1s ease 0.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+@media screen and (min-width: 768px) {
+  #menu .restaurantName {
+    justify-content: center;
+  }
+  #menu .starter, #menu .mainCourse, #menu .dessert {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #menu {
+    flex-flow: row wrap;
+    border-radius: 0px;
+  }
+  #menu .restaurantName {
+    width: 100%;
+  }
+  #menu .starter, #menu .mainCourse, #menu .dessert {
+    max-width: 33%;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes marginIn {
+  from {
+    transform: translateY(15px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
